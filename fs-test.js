@@ -97,16 +97,17 @@ function readFile (fs, filePath) {
  */
 function fileStats (fs) {
   fs.stat('./tmp', function  (err, stats) {
-    if (err) {
-        console.log(err);
-        // throw err;
-    }
-    if (stats.isFile()) {
-        console.log('./tmp is File ');
-    }
-    else if (stats.isDirectory()) {
-        console.log('./tmp is directory');
-    }
-});
+        if (err) {
+            console.log(err);
+            // throw err;
+        }
+        if (stats.isFile()) {
+            console.log('./tmp is File ');
+        }
+        else if (stats.isDirectory()) {
+            console.log('./tmp is directory');
+        }
+    });
 
 }
+

@@ -23,13 +23,14 @@ http.get(url).on('error', function () {
     var html = '';
     res.setEncoding('utf8');
     res.on('data', function (data) {
+
+        console.log(data);
         html += data;
     });
 
     res.on('end', function  () {
         var $ = cheerio.load(html);
         var days = $('.days7', 'body');
-        console.log(days.html());
         var file = fs.createWriteStream('./tmp/test.html');
         fs.open("tmp/test.html","w",function(err,fd){
             var buf = new Buffer(days.html());
