@@ -10,6 +10,7 @@ var urlOption = {
     path: '/legend/c935166f-5b88-11e5-85d7-70e2840c1e14'
 };
 var url = 'http://m.weather.com.cn/mweather/101010100.shtml';
+var legendUrl = 'http://legend.baidu.com/preview/legend/32239ebf-635b-11e5-85d7-70e2840c1e14#page=0';
 var options = {
     url: url,
     headers: {
