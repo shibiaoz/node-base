@@ -6,6 +6,7 @@ var fs = require('fs');
 var cheerio = require('cheerio');
 var url = 'http://legend.baidu.com/preview/legend/32239ebf-635b-11e5-85d7-70e2840c1e14#page=0';
 var url = 'http://shushuo.baidu.com/legend/c935166f-5b88-11e5-85d7-70e2840c1e14';
+var url = 'http://legend.baidu.com/preview/legend/a8a4feb4-6f02-11e5-85d7-70e2840c1e14#page=0';
 http.get(url).on('error', function () {
     console.log('获取数据失败');
 }).on('response', function (res){
@@ -17,7 +18,7 @@ http.get(url).on('error', function () {
 
     res.on('end', function  () {
         var buf = new Buffer(html);
-        fs.open("tmp/legend2.html","w",function(err,fd){
+        fs.open("tmp/zhongxin_card.html","w",function(err,fd){
             fs.write(fd,buf,0,buf.length,0,function(err,written,buffer){});
         });
     });
